@@ -1,0 +1,272 @@
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard {
+  width: 100%;
+}
+
+.dashboard h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+  gap: 1.5rem;
+
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 20px;
+
+  padding: 1.5rem;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(99, 102, 241, 0.3);
+
+  box-shadow:
+    0 12px 30px rgba(99, 102, 241, 0.15);
+}
+
+.card h3 {
+  color: #94a3b8;
+
+  font-size: 0.95rem;
+
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  font-size: 2rem;
+
+  font-weight: 700;
+}
+
+/* =========================
+   BUDGET SECTION
+========================= */
+
+.budget-section {
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 20px;
+
+  padding: 1.5rem;
+
+  margin-bottom: 2rem;
+}
+
+.budget-section h2 {
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  width: 100%;
+
+  height: 15px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border-radius: 30px;
+
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    #6366f1,
+    #38bdf8
+  );
+
+  border-radius: inherit;
+
+  transition: width 0.5s ease;
+}
+
+.budget-section p {
+  margin-top: 0.75rem;
+
+  color: #94a3b8;
+}
+
+/* =========================
+   RECENT EXPENSES
+========================= */
+
+.recent-expenses {
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 20px;
+
+  padding: 1.5rem;
+}
+
+.recent-expenses h2 {
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.08);
+}
+
+th {
+  text-align: center;
+
+  padding: 1rem;
+
+  color: #94a3b8;
+
+  font-weight: 600;
+
+  font-size: 0.9rem;
+}
+
+td {
+  text-align: center;
+
+  padding: 1rem;
+
+  vertical-align: middle;
+}
+
+tbody tr {
+  transition: all 0.25s ease;
+}
+
+tbody tr:hover {
+  background:
+    rgba(255, 255, 255, 0.04);
+}
+
+td:last-child {
+  color: #38bdf8;
+
+  font-weight: 600;
+}
+
+/* =========================
+   QUICK STATS GRID
+========================= */
+
+.quick-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px));
+
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.quick-card {
+  background: rgba(255,255,255,.05);
+
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  border-radius: 20px;
+
+  padding: 1.5rem;
+}
+
+.quick-card h3 {
+  margin-bottom: 1rem;
+
+  color: #94a3b8;
+}
+
+/* =========================
+   GREETING SECTION
+========================= */
+
+.greeting {
+  margin-bottom: 2rem;
+}
+
+.greeting h2 {
+  font-size: 2rem;
+  margin-left: 3.5rem;
+
+  margin-bottom: .5rem;
+}
+
+.greeting p {
+  color: #94a3b8;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+
+  .cards {
+    grid-template-columns:
+      repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .dashboard h1 {
+    font-size: 1.7rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  table {
+    display: inline-block;
+    overflow-x: auto;
+  }
+
+  .card p {
+    font-size: 1.6rem;
+  }
+}

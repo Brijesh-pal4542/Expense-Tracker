@@ -1,0 +1,134 @@
+.categories-container {
+  padding: 24px;
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.categories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.categories-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-left: 3rem;
+}
+
+.categories-header h3 {
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: #22c55e;
+  font-size: 1rem;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.category-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition: all 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.category-icon {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(99, 102, 241, 0.15);
+  font-size: 1.8rem;
+}
+
+.category-info {
+  flex: 1;
+}
+
+.category-info h3 {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.category-info p {
+  margin-top: 8px;
+  color: #ef4444;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.empty-category {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  color: var(--secondary-text);
+  font-size: 1.1rem;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .categories-container {
+    padding: 18px;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card {
+    padding: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .categories-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .category-card {
+    gap: 14px;
+  }
+
+  .category-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    font-size: 1.4rem;
+  }
+
+  .category-info h3 {
+    font-size: 1rem;
+  }
+
+  .category-info p {
+    font-size: 1rem;
+  }
+}

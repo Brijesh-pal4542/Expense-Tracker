@@ -1,0 +1,259 @@
+/* =========================
+   PAGE
+========================= */
+
+.add-expense-page {
+  width: 100%;
+}
+
+.add-expense-page h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-left: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.expense-form {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 1rem;
+
+  padding: 1.5rem;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 20px;
+
+  margin-bottom: 2rem;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.expense-form input,
+.expense-form select {
+  padding: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  color: #2a2d2e;
+
+  font-size: 0.95rem;
+
+  outline: none;
+
+  transition: all 0.3s ease;
+}
+
+.expense-form input:focus,
+.expense-form select:focus {
+  border-color: #6366f1;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(99, 102, 241, 0.2);
+}
+
+/* Fix dropdown option visibility */
+
+.expense-form select option {
+  background: #111827;
+  color: white;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.expense-form button {
+  border: none;
+
+  border-radius: 14px;
+
+  padding: 14px;
+
+  cursor: pointer;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #38bdf8
+  );
+
+  transition: all 0.3s ease;
+}
+
+.expense-form button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 20px
+    rgba(99, 102, 241, 0.25);
+}
+
+/* =========================
+   HISTORY SECTION
+========================= */
+
+.expense-history {
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 20px;
+
+  padding: 1.5rem;
+}
+
+.expense-history h2 {
+  margin-bottom: 1.5rem;
+}
+
+.expense-history p {
+  color: #94a3b8;
+}
+
+/* =========================
+   EXPENSE CARD
+========================= */
+
+.expense-item {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 1rem 1.25rem;
+
+  margin-bottom: 1rem;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  transition: all 0.25s ease;
+}
+
+.expense-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.expense-item h3 {
+  margin-bottom: 4px;
+
+  font-size: 1rem;
+}
+
+.expense-item p {
+  color: #94a3b8;
+
+  font-size: 0.9rem;
+}
+
+.expense-item small {
+  color: #64748b;
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.expense-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.expense-right span {
+  font-size: 1.1rem;
+
+  font-weight: 700;
+
+  color: #38bdf8;
+}
+
+/* =========================
+   DELETE BUTTON
+========================= */
+
+.delete-btn {
+  border: none;
+
+  padding: 10px 14px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  color: white;
+
+  font-weight: 600;
+
+  background: linear-gradient(
+    135deg,
+    #ef4444,
+    #dc2626
+  );
+
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px
+    rgba(239, 68, 68, 0.3);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .expense-form {
+    grid-template-columns: 1fr;
+  }
+
+  .expense-item {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .expense-right {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+}

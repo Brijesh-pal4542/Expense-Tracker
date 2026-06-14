@@ -1,0 +1,93 @@
+/* =========================
+   APP LAYOUT
+========================= */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-x: auto;
+  transition: all 0.3s ease;
+}
+
+/* =========================
+   SIDEBAR STATES
+========================= */
+
+.sidebar-open .main-content {
+  width: calc(100vw - 270px);
+}
+
+.sidebar-closed .main-content {
+  width: 100%;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+.dark {
+  color: #f8fafc;
+}
+
+.dark .main-content {
+  color: #f8fafc;
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+.light {
+  background: #f8fafc;
+  color: #1b74a7;
+}
+
+.light .main-content {
+  color: #05102a;
+}
+
+/* =========================
+   PAGE ANIMATION
+========================= */
+
+.main-content {
+  animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .layout {
+    position: relative;
+  }
+
+  .main-content {
+    width: 100% !important;
+    padding: 1.25rem;
+  }
+}

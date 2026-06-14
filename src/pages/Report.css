@@ -1,0 +1,110 @@
+.report-container {
+  padding: 20px;
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.report-header h2 {
+   font-size: 1.8rem;
+  margin-left: 3.5rem;
+}
+
+.report-total {
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: #22c55e;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.chart-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.chart-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.chart-card h3 {
+  margin-bottom: 20px;
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.empty-report {
+  text-align: center;
+  padding: 70px 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  color: var(--secondary-text);
+  font-size: 1.1rem;
+}
+
+.recharts-wrapper {
+  margin: 0 auto;
+}
+
+.recharts-cartesian-axis-tick-value,
+.recharts-legend-item-text {
+  fill: var(--text-color);
+}
+
+.recharts-tooltip-wrapper {
+  outline: none;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .report-container {
+    padding: 18px;
+  }
+
+  .chart-card {
+    padding: 16px;
+  }
+
+  .report-total {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .report-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .report-header h2 {
+    text-align: center;
+  }
+
+  .chart-card {
+    padding: 12px;
+  }
+
+  .chart-card h3 {
+    text-align: center;
+    font-size: 1rem;
+  }
+}
